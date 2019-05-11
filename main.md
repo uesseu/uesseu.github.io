@@ -14,10 +14,9 @@
 [同人活動](#doujin){.menu .normal-fg}
 [MNE同人誌](#doujin){.menu .normal-fg}
 [学園ニンジャ](#ninja){.menu .normal-fg}
-[お絵かきタイマー](#timer){.menu .normal-fg}
 [プリティモモ](#momo){.menu .danger-fg}
 [pdf2pptx](#pdf2pptx){.menu .normal-fg}
-[ninja-biboo](#biboo){.menu .normal-fg}
+[ゾウさん](#zosan){.menu .normal-fg}
 [About](#about){.menu .normal-fg}
 :::
 
@@ -53,17 +52,6 @@ MNEpythonの入門同人誌です。
 
 
 :::::: {.container}
-::: {.anc #timer}
-:::
-## お絵かきタイマー {.containerlabel}
-![](img/oe.jpg){width=100% .nosave}
-お絵かきの、保存し忘れを  
-防ぐためのタイマー。  
-音声ファイルは自分で用意してね！  
-現在公開一時停止中。
-::::::
-
-:::::: {.container}
 ::: {.anc #momo}
 :::
 ## プリティ☆モモ {.containerlabel .danger-fg .danger-bg}
@@ -92,13 +80,14 @@ pythonスクリプト。
 ::::::
 
 :::::: {.container}
-::: {.anc #biboo}
+::: {.anc #zosan}
 :::
-## Biboo {.containerlabel}
-bibtexのファイルを使って  
+## ゾウさん.vim {.containerlabel}
+Zoteroとvimを組み合わせて  
+参考文献を閲覧したり  
 論文の参考文献リストを  
 作るやつ。  
-[biboo](./biboo/index.html){.button .normal-fg}
+[リポジトリ](https://github.com/uesseu/zosan.vim){.button .normal-fg}
 ::::::
 
 
