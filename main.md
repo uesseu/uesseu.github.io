@@ -11,6 +11,7 @@
 :::
 
 ::: Mokuji
+[ニンジャの漣](#nin_wavelet){.menu .normal-fg}
 [同人活動](#doujin){.menu .normal-fg}
 [MNE同人誌](#doujin){.menu .normal-fg}
 [学園ニンジャ](#ninja){.menu .normal-fg}
@@ -24,6 +25,21 @@
 :::
 
 # 同人活動
+:::::: {.container}
+::: {.anc #nin_wavelet}
+:::
+## ニンジャの漣 {.containerlabel}
+![](img/mw.jpg){width=100% .nosave}
+python用波形解析用プログラム。  
+ニンジャの漣の特徴は
+
+- cythonによる実装
+- 拡張性
+- 一般モールスがある
+- 数学的手続きが少なく綺麗になる
+[リポジトリ](https://github.com/uesseu/nin_wavelets){.button .normal-fg}
+::::::
+
 :::::: {.container}
 ::: {.anc #doujin}
 :::
