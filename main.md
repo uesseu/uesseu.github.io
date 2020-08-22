@@ -11,12 +11,12 @@
 :::
 
 ::: Mokuji
-[ニンジャの漣](#nin_wavelet){.menu .normal-fg}
 [同人活動](#doujin){.menu .normal-fg}
+[chainiter](#chainiter){.menu .normal-fg}
+[ニンジャの漣](#nin_wavelet){.menu .normal-fg}
 [MNE同人誌](#doujin){.menu .normal-fg}
 [学園ニンジャ](#ninja){.menu .normal-fg}
 [プリティモモ](#momo){.menu .danger-fg}
-[pdf2pptx](#pdf2pptx){.menu .normal-fg}
 [ゾウさん](#zosan){.menu .normal-fg}
 [About](#about){.menu .normal-fg}
 :::
@@ -26,23 +26,39 @@
 
 # 同人活動
 :::::: {.container}
+::: {.anc #chainiter}
+:::
+
+## chainiter {.containerlabel}
+
+pythonのコルーチンも
+並列化出来るパッケージ。
+並行処理+並列処理な。
+メソッドチェーン出来る。
+
+[リポジトリ](https://github.com/uesseu/chainiter){.button .normal-fg}
+::::::
+
+:::::: {.container}
 ::: {.anc #nin_wavelet}
 :::
-## ニンジャの漣 {.containerlabel}
-![](img/mw.jpg){width=100% .nosave}
-python用波形解析用プログラム。  
-ニンジャの漣の特徴は
 
-- cythonによる実装
+## 忍者之漣 {.containerlabel}
+![](img/mw.jpg){width=100% .nosave}
+FFTベースのpython用  
+波形解析用プログラム。  
+多分python界最速。
+
 - 拡張性
-- 一般モールスがある
-- 数学的手続きが少なく綺麗になる
+- 複素CWTに特化
+- CUDAで超速い
 [リポジトリ](https://github.com/uesseu/nin_wavelets){.button .normal-fg}
 ::::::
 
 :::::: {.container}
 ::: {.anc #doujin}
 :::
+
 ## MNE同人誌 {.containerlabel}
 ![](img/mn.jpg){width=100% .nosave}
 脳波・脳磁図解析用の  
@@ -80,20 +96,6 @@ R18G。子供はみちゃダメ。
 [プリティ☆モモ(pixiv、R18G)](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=63254378){.button .danger-fg}
 ::::::
 
-
-:::::: {.container}
-::: {.anc #pdf2pptx}
-:::
-## pdf2pptx {.containerlabel}
-pdfを忠実にpptxにする為の  
-pythonスクリプト。  
-他のサービスとかと違って  
-デザインは絶対に崩れない。  
-何故かって？  
-内部的にスクショを撮ってる  
-だけだから!  
-[リポジトリ](https://github.com/uesseu/pdf2pptx){.button .normal-fg}
-::::::
 
 :::::: {.container}
 ::: {.anc #zosan}
