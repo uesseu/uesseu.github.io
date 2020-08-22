@@ -6,7 +6,9 @@
 [↑](#top){.bottombutton .menu .normal-fg}
 
 
-## ニンジャのゆるふわ修練場 {.containerlabel}
+::: {.containerlabel}
+## ニンジャのゆるふわ修練場
+:::
 ::: {.anc #top}
 :::
 
@@ -29,12 +31,13 @@
 ::: {.anc #chainiter}
 :::
 
-## chainiter {.containerlabel}
+::: {.containerlabel}
+## chainiter ![mit](img/license-MIT-blue.svg)
+:::
 
-pythonのコルーチンも
-並列化出来るパッケージ。
-並行処理+並列処理な。
-メソッドチェーン出来る。
+pythonで非同期処理と並列処理を併用するパッケージ。
+Node.js風にメソッドチェーン出来る。
+高速化のために一寸癖がある。
 
 [リポジトリ](https://github.com/uesseu/chainiter){.button .normal-fg}
 ::::::
@@ -43,15 +46,14 @@ pythonのコルーチンも
 ::: {.anc #nin_wavelet}
 :::
 
-## 忍者之漣 {.containerlabel}
-![](img/mw.jpg){width=100% .nosave}
-FFTベースのpython用  
-波形解析用プログラム。  
-多分python界最速。
+::: {.containerlabel}
+## 忍者之漣 ![mit](img/license-MIT-blue.svg)
+:::
 
-- 拡張性
-- 複素CWTに特化
-- CUDAで超速い
+![](img/mw.jpg){width=100% .nosave}
+複素CWTに特化した波形解析用pythonパッケージ。
+多分python界最速級。
+地味に拡張性に優れているという特徴がある。
 [リポジトリ](https://github.com/uesseu/nin_wavelets){.button .normal-fg}
 ::::::
 
@@ -59,12 +61,12 @@ FFTベースのpython用
 ::: {.anc #doujin}
 :::
 
-## MNE同人誌 {.containerlabel}
+::: {.containerlabel}
+## MNE同人誌 ![mit](img/license-MIT-blue.svg)
+:::
 ![](img/mn.jpg){width=100% .nosave}
-脳波・脳磁図解析用の  
-pythonのパッケージの  
-MNEpythonの入門同人誌です。  
-まだ書いている途中です…。  
+脳波・脳磁図解析用のpythonのパッケージの
+MNEpythonの入門同人誌。永遠に未完成。
 正しいこと書いてる保証はない。  
 [ダウンロード](https://github.com/uesseu/MNE-Doujinshi/raw/master/out.pdf){.button .normal-fg}
 [リポジトリ](https://github.com/uesseu/MNE-Doujinshi){.button .normal-fg}
@@ -74,11 +76,12 @@ MNEpythonの入門同人誌です。
 :::::: {.container}
 ::: {.anc #ninja}
 :::
-## 学園ニンジャ {.containerlabel}
+::: {.containerlabel}
+## 学園ニンジャ ![pixiv](img/pixiv-zen-green.svg)
+:::
 ![](img/nin.png){width=100% .nosave}
-ラブコメの4コマ漫画です。  
-だいたい100頁位あります。  
-ちょい暗めです。  
+ラブコメの4コマ漫画です。だいたい100頁位あります。
+ちょい暗め。学生の時ぼっちだった俺にかけたラブコメの限界。
 [学園ニンジャ(pixiv)](https://www.pixiv.net/user/15182417/series/6498){.button .normal-fg}
 ::::::
 
@@ -86,13 +89,13 @@ MNEpythonの入門同人誌です。
 :::::: {.container}
 ::: {.anc #momo}
 :::
-## プリティ☆モモ {.containerlabel .danger-fg .danger-bg}
+::: {.containerlabel .danger-fg .danger-bg}
+## プリティ☆モモ ![pixiv](img/pixiv-R18G-red.svg)
+:::
 ![](img/ryo.jpg){width=100% .nosave}
-女の子が男の子を殺す  
-逆リョナ漫画です。  
-内容はあまりない。  
-R18G。子供はみちゃダメ。  
-大人も自己責任で。  
+女の子が男の子を殺す逆リョナ漫画。
+内容はあまりない。R18G。子供はみちゃダメ。
+大人も自己責任で(つっても、リョナはサイレントマジョリティだし)。  
 [プリティ☆モモ(pixiv、R18G)](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=63254378){.button .danger-fg}
 ::::::
 
@@ -100,11 +103,10 @@ R18G。子供はみちゃダメ。
 :::::: {.container}
 ::: {.anc #zosan}
 :::
-## ゾウさん.vim {.containerlabel}
-Zoteroとvimを組み合わせて  
-参考文献を閲覧したり  
-論文の参考文献リストを  
-作るやつ。  
+::: {.containerlabel}
+## ゾウさん.vim ![mit](img/license-MIT-blue.svg)
+:::
+Zoteroとvimを組み合わせて参考文献を閲覧したり論文の参考文献リストを作るやつ。  
 [リポジトリ](https://github.com/uesseu/zosan.vim){.button .normal-fg}
 ::::::
 
@@ -116,16 +118,22 @@ Zoteroとvimを組み合わせて
 
 ::: {.anc #about}
 :::
-## ここはなに？ {.containerlabel}
-色んなことをする所。  
-主に… 脳の生理学  
-同人活動(漫画)  
-プログラミング(下手)  
-将棋(アマ2段のヘボ) 等の、  
+::: {.containerlabel}
+## ここはなに？
+:::
+- 脳の生理学  
+- 同人活動(漫画)  
+- プログラミング(下手)  
+- 将棋(アマ2段のヘボ) 等の、  
 成果物でもうｐできればいいな。  
+::::::
 
-## お前誰？ {.containerlabel}
-別に誰でも良いじゃんヽ(´ー｀)ノ  
-[qiita](http://qiita.com/uesseu){.button .normal-fg}
+:::::: {.container}
+::: {.containerlabel}
+
+## お前誰？
+:::
+ただのキモオタだよ。  
+[qiita](http://qiita.com/uesseu){.button .normal-fg}  
 [github](http://github.com/uesseu){.button .normal-fg}
 ::::::
