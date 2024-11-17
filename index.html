@@ -1,0 +1,156 @@
+<style type="text/css">
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #content {
+    position: absolute;
+    left: 20%;
+  }
+  #bg {
+  background-image: linear-gradient(0deg, #ffffcc 50%, #ffffaa 50%);
+  background-size: 20px 20px;
+  }
+</style>
+<body id=bg>
+<div id="toc" class="anc">
+<h1 id="目次">目次</h1>
+<ul>
+<li><a href="#abstract">概要</a></li>
+<li><a href="#graduate">資格/学位</a></li>
+<li><a href="#history">簡単な履歴</a></li>
+<li><a href="#hobby">趣味</a></li>
+<li><a href="#make">作ったもの</a>
+<ul>
+<li><a href="#paper">論文</a></li>
+<li><a href="#stdio">標準入出力関連</a></li>
+<li><a href="#vim">vim関連</a></li>
+<li><a href="#patent">特許</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="content">
+
+<div id="abstract" class="anc">
+<h1 id="概要">概要</h1>
+</div>
+<ul>
+<li>名前: 中西 翔一郎</li>
+<li>職業: 医師
+<ul>
+<li>精神科</li>
+</ul></li>
+</ul>
+<hr>
+<div id="graduate" class="anc">
+<h1 id="資格学位">資格/学位</h1>
+</div>
+<ul>
+<li>医師免許</li>
+<li>自動車普通免許8t</li>
+<li>医学博士</li>
+</ul>
+<hr>
+<div id="history" class="anc">
+<h1 id="簡単な履歴">簡単な履歴</h1>
+</div>
+<ul>
+<li>1983年: 現世にログインした</li>
+<li>2009年: 九州大学医学部医学科卒業</li>
+<li>2010年: 九州大学病院初期研修医 以降、本職は医師</li>
+<li>2016年: 九州大学医学研究院　入学</li>
+<li>2024年: 卒業、博士号取得</li>
+</ul>
+<hr>
+<div id="hobby" class="anc">
+<h1 id="趣味">趣味</h1>
+</div>
+<ul>
+<li>ゲーム 将棋(アマ2段)</li>
+<li>同人活動(オリジナル漫画、生理学等)</li>
+<li>コンピュータ(vim、並列計算、標準入出力)</li>
+</ul>
+<hr>
+<div id="make" class="anc">
+<h1 id="作ったもの">作ったもの</h1>
+</div>
+<hr>
+<div id="paper" class="anc">
+<h2 id="論文">論文</h2>
+</div>
+<ul>
+<li><a
+href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1277733/full">Abnormal
+phase entrainment of low- and high-gamma-band auditory steady-state
+responses in schizophrenia</a>
+<ul>
+<li>脳活動の位相が病人は違うんだよ！という内容の論文。</li>
+</ul></li>
+</ul>
+<hr>
+<div id="doujin" class="anc">
+<h2 id="同人活動">同人活動</h2>
+</div>
+<ul>
+<li><a href="https://github.com/uesseu/MNE-Doujinshi">MNE同人誌</a>
+<ul>
+<li>MNE-pythonに関する同人誌。</li>
+<li>200ページくらいあります。</li>
+<li>コミックシティ福岡に出したけれど1冊も売れませんでした。</li>
+</ul></li>
+</ul>
+<hr>
+<div id="stdio" class="anc">
+<h2 id="標準入出力関連">標準入出力関連</h2>
+</div>
+<ul>
+<li><a href="https://github.com/uesseu/ninvoicevox">ninvoicevox</a>
+<ul>
+<li>python用やshellの為のVOICEVOXクライアント。</li>
+<li>pythonのエラーの読みあげ機能のおまけ付き。</li>
+<li>依存先を減らしたかったのでソケット通信モジュールは自作。</li>
+</ul></li>
+<li><a href="https://github.com/uesseu/ntag">ntag</a>
+<ul>
+<li>標準入出力用のファイルタグ付けソフト。</li>
+<li>sqlite3とpythonを使っている。inodeベース。</li>
+<li>lsにタグを添えたりフィルタを掛けたり。</li>
+</ul></li>
+<li><a href="https://github.com/uesseu/ninter">ninter</a>
+<ul>
+<li>DenoやRのオブジェクトをpythonのオブジェクトとして直接使う実験的ソフト。</li>
+<li>結構シームレスに使える。</li>
+</ul></li>
+</ul>
+<hr>
+<div id="vim" class="anc">
+<h2 id="vim関連">vim関連</h2>
+</div>
+<ul>
+<li><a
+href="https://github.com/uesseu/nin-english.vim">nin-english.vim</a>
+<ul>
+<li>vimの為の英語執筆用Deno製プラグイン。</li>
+<li>補完や辞書引きを受け負える。</li>
+</ul></li>
+<li><a href="https://github.com/uesseu/ninco.vim">ninco.vim</a>
+<ul>
+<li>vimでchatGPT使うDeno製プラグイン。</li>
+<li>依存先は極力減らしたかったのでWebAPIを叩く機能も含め自作。</li>
+<li>とにかくシンプル。安あがりで済ませたい僕のために。</li>
+</ul></li>
+<li><a href="https://github.com/uesseu/vimslide">vimslide</a>
+<ul>
+<li>vimによるUnix用スライドプラグイン。ほぼジョークソフト。</li>
+<li>画像も音声も出せるけれど、フォントを変えられない。</li>
+<li>vimで出力するじゃねえんだよ！vimがスライドになるんだよオラッ！</li>
+</ul></li>
+</ul>
+<hr>
+<div id="patent" class="anc">
+<h2 id="特許">特許</h2>
+</div>
+<p>超速い脳解析方法を申請した事があります。</p>
+</div>
+</body>
