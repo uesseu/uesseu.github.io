@@ -1,176 +1,480 @@
+<!--
+  Bold, modern rewrite of the provided HTML.
+  Features:
+  - Sleek top navigation with smooth-scrolling sections
+[Error][Error] - Responsive hamburger menu for mobile
+  - Floating "トップへ戻る" button (visible after scroll)
+  - Styled sections with headings, anchors, and external links
+  - Keeps original content structure (Japanese content) while enhancing visuals
+-->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style type="text/css">
-@media (min-width: 520px){
-  #toc {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  #content {
-    position: absolute;
-    left: 200px;
-  }
-}
-@media (max-width: 480px){
-  #toc {
-    top: 0;
-    left: 0;
-  }
-  #content {
-  }
-}
-  #bg {
-  background-image: linear-gradient(0deg, #ffffcc 50%, #ffffaa 50%);
-  background-size: 20px 20px;
-  }
-</style>
-<title>
-中西翔一郎のホームページ
-</title>
-</head>
-<body id=bg>
-<div id="toc" class="anc">
-<h1 id="目次">目次</h1>
-<ul>
-<li><a href="#abstract">概要</a></li>
-<li><a href="#graduate">資格/学位</a></li>
-<li><a href="#history">簡単な履歴</a></li>
-<li><a href="#hobby">趣味</a></li>
-<li><a href="#make">作ったもの</a>
-<ul>
-<li><a href="#paper">論文</a></li>
-<li><a href="#stdio">標準入出力関連</a></li>
-<li><a href="#vim">vim関連</a></li>
-<li><a href="#patent">特許</a></li>
-</ul></li>
-</ul>
-</div>
-<div id="content">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>中西翔一郎のホームページ</title>
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --surface: #141b22;
+      --surface-2: #1e252c;
+      --text: #e8f0f5;
+      --muted: #a6b4c2;
+      --accent: #7afcff;
+      --accent-2:#8a7dff;
+      --card: rgba(20,26,34,.9);
+      --radius: 14px;
+    }
 
-<div id="abstract" class="anc">
-<h1 id="概要">概要</h1>
-</div>
-<ul>
-<li>名前: 中西 翔一郎</li>
-<li>職業: 医師
-<ul>
-<li>精神科</li>
-</ul></li>
-</ul>
-<hr>
-<div id="graduate" class="anc">
-<h1 id="資格学位">資格/学位</h1>
-</div>
-<ul>
-<li>医師免許</li>
-<li>自動車普通免許8t</li>
-<li>医学博士</li>
-</ul>
-<hr>
-<div id="history" class="anc">
-<h1 id="簡単な履歴">簡単な履歴</h1>
-</div>
-<ul>
-<li>1983年: 現世にログインした</li>
-<li>2009年: 九州大学医学部医学科卒業</li>
-<li>2010年: 九州大学病院初期研修医 以降、本職は医師</li>
-<li>2016年: 九州大学医学研究院　入学</li>
-<li>2024年: 卒業、博士号取得</li>
-</ul>
-<hr>
-<div id="hobby" class="anc">
-<h1 id="趣味">趣味</h1>
-</div>
-<ul>
-<li>ゲーム 将棋(アマ2段)</li>
-<li>同人活動(オリジナル漫画、生理学等)</li>
-<li>コンピュータ(vim、並列計算、標準入出力)</li>
-</ul>
-<hr>
-<div id="make" class="anc">
-<h1 id="作ったもの">作ったもの</h1>
-</div>
-<hr>
-<div id="paper" class="anc">
-<h2 id="論文">論文</h2>
-</div>
-<ul>
-<li><a
-href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1277733/full">Abnormal
-phase entrainment of low- and high-gamma-band auditory steady-state
-responses in schizophrenia</a>
-<ul>
-<li>脳活動の位相が病人は違うんだよ！という内容の論文。</li>
-</ul></li>
-</ul>
-<hr>
-<div id="doujin" class="anc">
-<h2 id="同人活動">同人活動</h2>
-</div>
-<ul>
-<li><a href="https://github.com/uesseu/MNE-Doujinshi">MNE同人誌</a>
-<ul>
-<li>MNE-pythonに関する同人誌。</li>
-<li>200ページくらいあります。</li>
-<li>コミックシティ福岡に出したけれど1冊も売れませんでした。</li>
-</ul></li>
-</ul>
-<hr>
-<div id="stdio" class="anc">
-<h2 id="標準入出力関連">標準入出力関連</h2>
-</div>
-<ul>
-<li><a href="https://github.com/uesseu/ninvoicevox">ninvoicevox</a>
-<ul>
-<li>python用やshellの為のVOICEVOXクライアント。</li>
-<li>pythonのエラーの読みあげ機能のおまけ付き。</li>
-<li>依存先を減らしたかったのでソケット通信モジュールは自作。</li>
-</ul></li>
-<li><a href="https://github.com/uesseu/ntag">ntag</a>
-<ul>
-<li>標準入出力用のファイルタグ付けソフト。</li>
-<li>sqlite3とpythonを使っている。inodeベース。</li>
-<li>lsにタグを添えたりフィルタを掛けたり。</li>
-</ul></li>
-<li><a href="https://github.com/uesseu/ninter">ninter</a>
-<ul>
-<li>DenoやRのオブジェクトをpythonのオブジェクトとして直接使う実験的ソフト。</li>
-<li>結構シームレスに使える。</li>
-</ul></li>
-</ul>
-<hr>
-<div id="vim" class="anc">
-<h2 id="vim関連">vim関連</h2>
-</div>
-<ul>
-<li><a
-href="https://github.com/uesseu/nin-english.vim">nin-english.vim</a>
-<ul>
-<li>vimの為の英語執筆用Deno製プラグイン。</li>
-<li>補完や辞書引きを受け負える。</li>
-</ul></li>
-<li><a href="https://github.com/uesseu/ninco.vim">ninco.vim</a>
-<ul>
-<li>vimでchatGPT使うDeno製プラグイン。</li>
-<li>依存先は極力減らしたかったのでWebAPIを叩く機能も含め自作。</li>
-<li>とにかくシンプル。安あがりで済ませたい僕のために。</li>
-</ul></li>
-<li><a href="https://github.com/uesseu/vimslide">vimslide</a>
-<ul>
-<li>vimによるUnix用スライドプラグイン。ほぼジョークソフト。</li>
-<li>画像も音声も出せるけれど、フォントを変えられない。</li>
-<li>vimで出力するじゃねえんだよ！vimがスライドになるんだよオラッ！</li>
-</ul></li>
-</ul>
-<hr>
-<div id="patent" class="anc">
-<h2 id="特許">特許</h2>
-</div>
-<p>超速い脳解析方法を申請した事があります。</p>
-</div>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background: linear-gradient(135deg, #0b0f14 0%, #0a0f14 60%, #0b0f14 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+    }
+
+    /* Top header with gradient title and responsive menu */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: rgba(10,12,15,0.85);
+      backdrop-filter: saturate(1.2) blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      display: flex;
+      gap: 14px;
+      align-items: right;
+    }
+
+    .nav a {
+      color: #e8f0f5;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: transform .2s ease, background .3s ease;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 18px;
+    }
+
+    .nav a:hover { transform: translateY(-1px); background: rgba(255,255,255,.08); }
+
+    /* Hamburger for mobile */
+    .hamburger {
+      display: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.04);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .hamburger:hover { background: rgba(255,255,255,.08); }
+
+    /* Hero / Intro */
+    .hero {
+      padding: 60px 20px 20px;
+      text-align: center;
+      background: radial-gradient(circle at 20% 0%, rgba(122,255,252,.25), transparent 40%),
+                  radial-gradient(circle at 100% 0%, rgba(138,125,255,.25), transparent 40%),
+                  linear-gradient(135deg, rgba(20,26,34,.8), rgba(20,26,34,.5) 60%, rgba(20,26,34,.8));
+      min-height: 40px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0;
+      background: linear-gradient(90deg, #fff, #7afcff 60%, #8a7dff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: .5px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    main {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+      padding: 28px 0 80px;
+    }
+
+    section {
+      margin: 28px 0;
+      padding: 16px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 8px 30px rgba(0,0,0,.25);
+    }
+
+    section h2 {
+      font-size: 30px;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section .anc > h1, section .anc > h2 {
+      display: inline-block;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 6px 0 0 20px;
+      padding: 0;
+      list-style: disc;
+      font-size: 20px;
+    }
+
+    ul ul {
+      list-style: circle; margin-left: 6px;
+      font-size: 16px;
+    }
+
+    a {
+      color: #aee8ff;
+    }
+
+    /* Section color accents per block for bold feel */
+    section#概要 { border-left: 6px solid #7afcff; }
+    section#資格学位 { border-left: 6px solid #8a7dff; }
+    section#簡単な履歴 { border-left: 6px solid #ffbf69; }
+    section#趣味 { border-left: 6px solid #7bd389; }
+    section#論文 { border-left: 6px solid #a1a4ff; }
+    section#同人活動 { border-left: 6px solid #ffd166; }
+    section#プログラム { border-left: 6px solid #6bdcff; }
+    section#vim関連 { border-left: 6px solid #c977ff; }
+    section#特許 { border-left: 6px solid #ff6b6b; }
+
+    /* Floating "Back to Top" button */
+    #toTop {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(135deg, #7afcff, #8a7dff);
+      color: #0b0f14;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s ease;
+    }
+    #toTop:hover { transform: translateY(-2px); }
+
+    /* Responsive tweaks: show hamburger on small screens */
+    @media (max-width: 900px) {
+      .nav { display: none; flex-direction: column; position: absolute; top: 60px; left: 20px;  background: rgba(10,12,15,.95);
+        padding: 12px; border-radius: 12px; border:1px solid rgba(255,255,255,.08); width: max(220px, 40vw);
+        box-shadow: 0 8px 20px rgba(0,0,0,.4);
+      }
+      .nav a { display: block; padding: 8px 12px; border-radius: 8px; margin: 4px 0; }
+      .hamburger { display: inline-flex; }
+    }
+
+    /* Subtle focus ring for accessibility on focus navigation */
+    a:focus, button:focus { outline: 2px solid #fff; outline-offset: 2px; }
+  </style>
+</head>
+<body id="bg">
+  <!-- Header with navigation -->
+  <header class="site-header" aria-label="サイトナビゲーション">
+
+    <nav class="nav" id="nav" aria-label="メインメニュー">
+      <a href="#概要">概要</a>
+      <a href="#資格学位">🎓資格/学位</a>
+      <a href="#簡単な履歴">🚶‍♂️履歴</a>
+      <a href="#趣味">♟️趣味</a>
+      <a href="#論文">📝論文</a>
+      <a href="#同人活動">📚同人活動</a>
+      <a href="#プログラム">🖥️プログラム</a>
+      <a href="#vim関連">⌨️vim関連</a>
+      <a href="#特許">〰️特許</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      &#9776;
+    </button>
+  </header>
+
+  <!-- Floating top button -->
+  <button id="toTop" aria-label="トップへ戻る">↑</button>
+
+  <!-- Hero / Intro -->
+  <section class="hero" aria-label="イントロダクション">
+    <h1>中西翔一郎のホームページ</h1>
+    <p>というか単なるポートフォリオだ！</p>
+  </section>
+
+  <main>
+    <!-- 概要 -->
+    <section id="概要" class="card" aria-labelledby="概要-title">
+      <div class="anc">
+        <h2 id="概要-title" style="margin:0 0 8px;">概要</h2>
+      </div>
+      <ul>
+        <li>名前: 中西 翔一郎</li>
+        <li>職業: 医師
+          <ul>
+            <li>精神科</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 資格学位 -->
+    <section id="資格学位" class="card" aria-labelledby="資格学位-title">
+      <div class="anc">
+        <h2 id="資格学位-title" style="margin:0 0 8px;">🎓資格/学位</h2>
+      </div>
+      <ul>
+        <li>医師免許</li>
+        <li>自動車普通免許8t</li>
+        <li>医学博士</li>
+      </ul>
+    </section>
+
+    <!-- 簡単な履歴 -->
+    <section id="簡単な履歴" class="card" aria-labelledby="簡単な履歴-title">
+      <div class="anc">
+        <h2 id="簡単な履歴-title" style="margin:0 0 8px;">🚶‍♂️簡単な履歴</h2>
+      </div>
+      <ul>
+        <li>1983年: 現世にログインした</li>
+        <li>2009年: 九州大学医学部医学科卒業</li>
+        <li>2010年: 九州大学病院初期研修医、以降、本職は医師</li>
+        <li>2016年: 九州大学医学研究院 入学</li>
+        <li>2022年: 色々あってバツ2となる</li>
+        <li>2024年: 卒業、博士号取得</li>
+      </ul>
+    </section>
+
+    <!-- 趣味 -->
+    <section id="趣味" class="card" aria-labelledby="趣味-title">
+      <div class="anc">
+        <h2 id="趣味-title" style="margin:0 0 8px;">♟️趣味</h2>
+      </div>
+      <ul>
+        <li>ゲーム 将棋(アマ2段)</li>
+        <li>同人活動(オリジナル漫画、生理学等)</li>
+        <li>コンピュータ(vim、並列計算、標準入出力)</li>
+      </ul>
+    </section>
+
+    <!-- 論文 -->
+    <section id="論文" class="card" aria-labelledby="論文-title">
+      <div class="anc">
+        <h2 id="論文-title" style="margin:0 0 8px;">📝論文</h2>
+      </div>
+      <ul>
+        <li>
+          <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1277733/full" target="_blank" rel="noopener">Abnormal phase entrainment of low- and high-gamma-band auditory steady-state responses in schizophrenia</a>
+          <ul><li>脳活動の位相が病人は違うんだよ！という内容の論文。</li></ul>
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/2506.07793" target="_blank" rel="noopener">Novel software for continuous wavelet analysis enable EEG real-time analysis on portable computers</a>
+          <ul><li>すごく速いWavelet変換のソフトの論文。</li></ul>
+          <ul><li>実装はこれです😊<a href="https://github.com/uesseu/ninwavelets" target="_blank" rel="noopener">ninwavelets</a></li></ul>
+
+
+        </li>
+      </ul>
+    </section>
+
+    <!-- 同人活動 -->
+    <section id="同人活動" class="card" aria-labelledby="同人活動-title">
+      <div class="anc">
+        <h2 id="同人活動-title" style="margin:0 0 8px;">📚同人活動</h2>
+      </div>
+      <ul>
+        <li>
+          <a href="https://github.com/uesseu/MNE-Doujinshi" target="_blank" rel="noopener">MNE同人誌</a>
+          <ul>
+            <li>MNE-pythonに関する同人誌。</li>
+            <li>200ページくらいあります。</li>
+            <li>コミックシティ福岡に出したけれど1冊も売れませんでした😣</li>
+          </ul>
+        </li>
+      </ul>
+      <ul><li>それ以外の活動についてはここでは自粛します！御察し下さい！</li></ul>
+    </section>
+
+    <!-- 標準入出力関連 -->
+    <section id="プログラム" class="card" aria-labelledby="プログラム-title">
+      <div class="anc">
+        <h2 id="プログラム-title" style="margin:0 0 8px;">🖥️プログラム</h2>
+      </div>
+      <ul>
+        <li>
+          <a href="https://github.com/uesseu/ninvoicevox" target="_blank" rel="noopener">ninvoicevox</a>
+          <ul>
+            <li>python用やshellの為のVOICEVOXクライアント。</li>
+            <li>pythonのエラーの読みあげ機能のおまけ付き。</li>
+            <li>依存先を減らしたかったのでソケット通信モジュールは自作。</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/ntag" target="_blank" rel="noopener">ntag</a>
+          <ul>
+            <li>標準入出力用のファイルタグ付けソフト。</li>
+            <li>sqlite3とpythonを使っている。inodeベース。</li>
+            <li>lsにタグを添えたりフィルタを掛けたり。</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/ninter" target="_blank" rel="noopener">ninter</a>
+          <ul>
+            <li>DenoやRのオブジェクトをpythonのオブジェクトとして直接使う実験的ソフト。</li>
+            <li>結構シームレスに使える。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- vim関連 -->
+    <section id="vim関連" class="card" aria-labelledby="vim関連-title">
+      <div class="anc">
+        <h2 id="vim関連-title" style="margin:0 0 8px;">⌨️vim関連</h2>
+      </div>
+      <ul>
+        <li>
+          <a href="https://github.com/uesseu/nin-english.vim" target="_blank" rel="noopener">nin-english.vim</a>
+          <ul>
+            <li>vimの為の英語執筆用Deno製プラグイン。</li>
+            <li>補完や辞書引きを受け負える。</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/ninco2.vim" target="_blank" rel="noopener">ninco2.vim</a>
+          <ul>
+            <li>vimでchatGPT使うDeno製プラグイン。</li>
+            <li>依存先は極力減らしたかったのでWebAPIを叩く機能も含め自作。</li>
+            <li>とにかくシンプル。安あがりで済ませたい僕のために。</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/vimslide" target="_blank" rel="noopener">vimslide</a>
+          <ul>
+            <li>vimによるUnix用スライドプラグイン。ほぼジョークソフト。</li>
+            <li>画像も音声も出せるけれど、フォントを変えられない。</li>
+            <li>vimで出力するじゃねえんだよ！vimがスライドになるんだよオラッ！</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/dothen.vim" target="_blank" rel="noopener">dothen.vim</a>
+          <ul>
+            <li>vimslideの動きを良くするために開発されたコマンド群。</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/ninbufgroup.vim" target="_blank" rel="noopener">ninbufgroup</a>
+          <ul>
+            <li>vimのバッファをタブ風に使うやつ。車輪の再発明。</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/uesseu/ninemenu.vim" target="_blank" rel="noopener">ninemenu</a>
+          <ul>
+            <li>vimのメニューを使いこなそうぜ！という風なプラグイン。</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 特許 -->
+    <section id="特許" class="card" aria-labelledby="特許-title">
+      <div class="anc">
+        <h2 id="特許-title" style="margin:0 0 8px;">〰️特許</h2>
+      </div>
+      <ul>
+        <li><a href="https://patents.google.com/patent/WO2023002914A1/ja">脳活動推定方法、脳活動推定装置および脳活動推定プログラム</a></li>
+        <ul>
+          <li>超速い脳解析方法を申請した事があります🧠</li>
+          <li>売れずにポシャりました😣</li>
+        </ul>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // Simple responsive nav toggle
+    (function(){
+      const nav = document.getElementById('nav');
+      const btn = document.getElementById('hamburger');
+      let open = false;
+      function closeNav(){ if(window.innerWidth <= 900){ nav.style.display='none'; open=false; } }
+      btn.addEventListener('click', function(){
+        if(!open){
+          nav.style.display = 'flex';
+          nav.style.flexDirection = 'column';
+          open = true;
+        } else {
+          closeNav();
+        }
+      });
+      // Close on resize to keep UX clean
+      window.addEventListener('resize', closeNav);
+      document.getElementById('nav').addEventListener('click', closeNav);
+    })();
+
+    // Smooth anchor offset for fixed header
+    (function(){
+      const links = document.querySelectorAll('a[href^="#"]');
+      for(const a of links){
+        a.addEventListener('click', function(e){
+          const target = document.querySelector(this.getAttribute('href'));
+          if(target){
+            e.preventDefault();
+            const y = target.getBoundingClientRect().top + window.pageYOffset - 60;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        });
+      }
+    })();
+
+    // Back to top button behavior
+    (function(){
+      const toTop = document.getElementById('toTop');
+      function toggle(){
+        if(window.scrollY > 260){
+          toTop.style.display = 'flex';
+        } else {
+          toTop.style.display = 'none';
+        }
+      }
+      window.addEventListener('scroll', toggle);
+      toTop.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      // Initialize
+      toggle();
+    })();
+  </script>
 </body>
 </html>
