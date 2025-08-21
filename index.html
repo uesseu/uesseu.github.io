@@ -27,12 +27,14 @@
     }
 
     .site-header {
+      top: 0;
       position: sticky;
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 20px;
+      height: 40px;
+      padding: 10px 20px;
       background: rgba(10,12,15,0.85);
       backdrop-filter: saturate(1.2) blur(6px);
       border-bottom: 1px solid rgba(255,255,255,.08);
@@ -412,19 +414,19 @@ document.getElementById('hamburger').addEventListener('click', ()=>{
   window.addEventListener('resize', closeNav);
   document.getElementById('nav').addEventListener('click', closeNav);
 
-  const links = document.querySelectorAll('a[href^="#"]');
-  for(const a of links){
-    a.addEventListener('click', (e)=>{
-      const target = document.querySelector(a.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 60, behavior: 'smooth' });
-      }
-    });
-  }
 });
 
 // Back to top button behavior
+const links = document.querySelectorAll('a[href^="#"]');
+for(const a of links){
+  a.addEventListener('click', (e)=>{
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 60, behavior: 'smooth' });
+    }
+  });
+}
 const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', ()=>{
   if(window.scrollY > 260) toTop.style.display = 'flex';
