@@ -5,177 +5,178 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>中西翔一郎のホームページ</title>
   <style>
-    :root{
-      --bg: #0b0f14;
-      --surface: #141b22;
-      --surface-2: #1e252c;
-      --text: #e8f0f5;
-      --muted: #a6b4c2;
-      --accent: #7afcff;
-      --accent-2:#8a7dff;
-      --card: rgba(20,26,34,.9);
-      --radius: 14px;
-    }
+:root{
+  --bg: #0b0f14;
+  --surface: #141b22;
+  --surface-2: #1e252c;
+  --text: #e8f0f5;
+  --muted: #a6b4c2;
+  --accent: #7afcff;
+  --accent-2:#8a7dff;
+  --card: rgba(20,26,34,.9);
+  --radius: 14px;
+}
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      background: linear-gradient(135deg, #0b0f14 0%, #0a0f14 60%, #0b0f14 100%);
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #0b0f14 0%, #0a0f14 60%, #0b0f14 100%);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+}
 
-    .site-header {
-      top: 0;
-      position: sticky;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 40px;
-      padding: 10px 20px;
-      background: rgba(10,12,15,0.85);
-      backdrop-filter: saturate(1.2) blur(6px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
+.site-header {
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 10px 20px;
+  background: rgba(10,12,15,0.85);
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
 
-    .nav {
-      display: flex;
-      gap: 14px;
-      align-items: right;
-    }
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: right;
+}
 
-    .nav a {
-      color: #e8f0f5;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 999px;
-      transition: transform .2s ease, background .3s ease;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      font-size: 18px;
-    }
+.nav a {
+  color: #e8f0f5;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: transform .2s ease, background .3s ease;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  font-size: 18px;
+}
 
-    .nav a:hover { transform: translateY(-1px); background: rgba(255,255,255,.08); }
+.nav a:hover { transform: translateY(-1px); background: rgba(255,255,255,.08); }
 
-    /* Hamburger for mobile */
-    .hamburger {
-      display: none;
-      width: 38px;
-      height: 38px;
-      border-radius: 9px;
-      border: 1px solid rgba(255,255,255,.15);
-      background: rgba(255,255,255,.04);
-      color: #fff;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.04);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 32px;
+}
 
-    .hamburger:hover { background: rgba(255,255,255,.08); }
+.hamburger:hover { background: rgba(255,255,255,.08); }
 
-    /* Hero / Intro */
-    .hero {
-      text-align: center;
-      background: radial-gradient(circle at 20% 0%, rgba(122,255,252,.25), transparent 40%),
-                  radial-gradient(circle at 100% 0%, rgba(138,125,255,.25), transparent 40%),
-                  linear-gradient(135deg, rgba(20,26,34,.8), rgba(20,26,34,.5) 60%, rgba(20,26,34,.8));
-      min-height: 40px;
-    }
+/* Hero / Intro */
+.hero {
+  text-align: center;
+  background: radial-gradient(circle at 20% 0%, rgba(122,255,252,.25), transparent 40%),
+              radial-gradient(circle at 100% 0%, rgba(138,125,255,.25), transparent 40%),
+              linear-gradient(135deg, rgba(20,26,34,.8), rgba(20,26,34,.5) 60%, rgba(20,26,34,.8));
+  min-height: 40px;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin: 0 0 8px;
-      line-height: 1.15;
-      background: linear-gradient(90deg, #fff, #7afcff 60%, #8a7dff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: .5px;
-    }
+.hero h1 {
+  font-size: 42px;
+  margin: 0 0 8px;
+  line-height: 1.15;
+  background: linear-gradient(90deg, #fff, #7afcff 60%, #8a7dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .5px;
+}
 
-    .hero p {
-      color: var(--muted);
-      font-size: 14px;
-    }
+.hero p {
+  color: var(--muted);
+  font-size: 14px;
+}
 
-    main {
-      width: min(1000px, 92%);
-      margin: 0 auto;
-    }
+main {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
 
-    section {
-      margin: 28px 0;
-      padding: 16px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08);
-      box-shadow: 0 8px 30px rgba(0,0,0,.25);
-    }
+section {
+  margin: 28px 0;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+}
 
-    section h2 {
-      font-size: 30px;
-      margin: 0 0 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+section h2 {
+  font-size: 30px;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-    section .anc > h1, section .anc > h2 {
-      display: inline-block;
-      margin: 0 0 8px;
-      font-weight: 700;
-    }
+section .anc > h1, section .anc > h2 {
+  display: inline-block;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
 
-    ul { margin: 6px 0 0 20px; list-style: disc; font-size: 20px; }
-    ul ul { list-style: circle; font-size: 16px; }
-    a { color: #aee8ff; }
+ul { margin: 6px 0 0 20px; list-style: disc; font-size: 20px; }
+ul ul { list-style: circle; font-size: 16px; }
+a { color: #aee8ff; }
 
-    /* Section color accents per block for bold feel */
-    section#概要 { border-left: 6px solid #7afcff; }
-    section#資格学位 { border-left: 6px solid #8a7dff; }
-    section#簡単な履歴 { border-left: 6px solid #ffbf69; }
-    section#趣味 { border-left: 6px solid #7bd389; }
-    section#論文 { border-left: 6px solid #a1a4ff; }
-    section#同人活動 { border-left: 6px solid #ffd166; }
-    section#プログラム { border-left: 6px solid #6bdcff; }
-    section#vim関連 { border-left: 6px solid #c977ff; }
-    section#特許 { border-left: 6px solid #ff6b6b; }
+/* Section color accents per block for bold feel */
+section#概要 { border-left: 6px solid #7afcff; }
+section#資格学位 { border-left: 6px solid #8a7dff; }
+section#簡単な履歴 { border-left: 6px solid #ffbf69; }
+section#趣味 { border-left: 6px solid #7bd389; }
+section#論文 { border-left: 6px solid #a1a4ff; }
+section#同人活動 { border-left: 6px solid #ffd166; }
+section#プログラム { border-left: 6px solid #6bdcff; }
+section#vim関連 { border-left: 6px solid #c977ff; }
+section#特許 { border-left: 6px solid #ff6b6b; }
 
-    /* Floating "Back to Top" button */
-    #toTop {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: none;
-      background: linear-gradient(135deg, #7afcff, #8a7dff);
-      color: #0b0f14;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0,0,0,.4);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: transform .2s ease;
-    }
-    #toTop:hover { transform: translateY(-2px); }
+/* Floating "Back to Top" button */
+#toTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #7afcff, #8a7dff);
+  color: #0b0f14;
+  font-size: 42px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,.4);
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease;
+}
+#toTop:hover { transform: translateY(-2px); }
 
-    /* Responsive tweaks: show hamburger on small screens */
-    @media (max-width: 900px) {
-      .nav { display: none; flex-direction: column; position: absolute; top: 60px; left: 20px;  background: rgba(10,12,15,.95);
-        padding: 12px; border-radius: 12px; border:1px solid rgba(255,255,255,.08); width: max(220px, 40vw);
-        box-shadow: 0 8px 20px rgba(0,0,0,.4);
-      }
-      .nav a { display: block; padding: 8px 12px; border-radius: 8px; margin: 4px 0; }
-      .hamburger { display: inline-flex; }
-    }
+/* Responsive tweaks: show hamburger on small screens */
+@media (max-width: 900px) {
+  .nav { visibility: hidden; flex-direction: column; position: absolute; top: 60px; left: 20px;  background: rgba(10,12,15,.95);
+    padding: 12px; border-radius: 12px; border:1px solid rgba(255,255,255,.08); width: max(220px, 40vw);
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+  }
+  .nav a { display: block; padding: 8px 12px; border-radius: 8px; margin: 4px 0; }
+  .hamburger { display: inline-flex; }
+}
 
-    /* Subtle focus ring for accessibility on focus navigation */
-    a:focus, button:focus { outline: 2px solid #fff; outline-offset: 2px; }
+/* Subtle focus ring for accessibility on focus navigation */
+a:focus, button:focus { outline: 2px solid #fff; outline-offset: 2px; }
   </style>
 </head>
 <body id="bg">
@@ -205,7 +206,7 @@
     <p>というか単なるポートフォリオだ！</p>
   </section>
 
-  <main>
+  <main id='main'>
     <section id="概要" class="card" aria-labelledby="概要-title">
       <div class="anc">
         <h2 id="概要-title" style="margin:0 0 8px;">概要</h2>
@@ -387,39 +388,38 @@
   </main>
 
   <script defer>
-let loaded = false
-document.getElementById('hamburger').addEventListener('mouseover', ()=>{
-  if (loaded) {return 0}
-  else {loaded = true}
-  const nav = document.getElementById('nav');
-  nav.style.display = 'flex';
-  nav.style.flexDirection = 'column';
-  const closeNav = ()=>{ nav.style.display= window.innerWidth <= 900 ? 'none' : 'block' }
-  document.getElementById('hamburger').addEventListener('mouseover', ()=>{
-    if(nav.style.display==='none') nav.style.display = 'flex';
-    else closeNav();
-  });
-  window.addEventListener('resize', closeNav);
-  window.addEventListener('click', closeNav);
-});
+const toggle = () => {
+  if (window.innerWidth <= 900){
+    nav.style.visibility = nav.style.visibility === 'hidden' ? 'visible' : 'hidden'
+  } else {
+    nav.style.visibility = 'visible'
+  }
+}
+const nav = document.getElementById('nav')
+nav.style.visibility = 'hidden'
+window.addEventListener('resize', toggle)
+document.getElementById('hamburger').addEventListener('mouseover', toggle)
+document.getElementById('hamburger').addEventListener('click', toggle)
+document.getElementById('nav').addEventListener('click', toggle)
+document.getElementById('main').addEventListener('click', ()=>{nav.style.visibility='hidden'})
 
-// Back to top button behavior
-const links = document.querySelectorAll('a[href^="#"]');
+const links = document.querySelectorAll('a[href^="#"]')
 for(const a of links){
   a.addEventListener('click', (e)=>{
-    const target = document.querySelector(a.getAttribute('href'));
+    const target = document.querySelector(a.getAttribute('href'))
     if(target){
-      e.preventDefault();
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 60, behavior: 'smooth' });
+      e.preventDefault()
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 60, behavior: 'smooth' })
     }
-  });
+  })
 }
-const toTop = document.getElementById('toTop');
+
+const toTop = document.getElementById('toTop')
 window.addEventListener('scroll', ()=>{
-  if(window.scrollY > 260) toTop.style.display = 'flex';
-  else toTop.style.display = 'none';
-});
-toTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }) });
+  if(window.scrollY > 260) toTop.style.visibility = 'visible'
+  else toTop.style.visibility = 'hidden'
+})
+toTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }) })
   </script>
 </body>
 </html>
