@@ -396,11 +396,18 @@ const toggle = () => {
   }
 }
 const nav = document.getElementById('nav')
-if (window.innerWidth >= 900) nav.style.visibility = 'visible'
+nav.style.visibility = window.innerWidth >= 900 ? 'visible' : 'hidden'
 window.addEventListener('resize', toggle)
 document.getElementById('hamburger').addEventListener('click', toggle)
-document.getElementById('nav').addEventListener('click', toggle)
+nav.addEventListener('click', toggle)
 document.getElementById('main').addEventListener('click', ()=>{nav.style.visibility='hidden'})
+
+document.addEventListener('keydown', e=>{
+  if (e.key === 'j') scrollBy(0, 30)
+  if (e.key === 'k') scrollBy(0, -30) 
+  if (e.key === 'g') scrollTo(0, 0)
+  if (e.key === 'G') scrollTo(0, 10000)
+})
 
 const links = document.querySelectorAll('a[href^="#"]')
 for(const a of links){
